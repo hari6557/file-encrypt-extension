@@ -1,24 +1,46 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function IndexPopup() {
-  const [data, setData] = useState("")
-
   return (
     <div
       style={{
-        padding: 16
+        width: "100vh",
+        height: "50vh"
       }}>
-      <h2>
-        Welcome to your{" "}
-        <a href="https://www.plasmo.com" target="_blank">
-          Plasmo
-        </a>{" "}
-        Extension!
-      </h2>
-      <input onChange={(e) => setData(e.target.value)} value={data} />
-      <a href="https://docs.plasmo.com" target="_blank">
-        View Docs
-      </a>
+      <div
+        style={{
+          backgroundColor: "wheat",
+          paddingTop: 10,
+          paddingBottom: 10,
+          textAlign: "center",
+          fontSize: 20,
+          fontWeight: "bold"
+        }}>
+        Oblivious - Safety in every step
+      </div>
+      <div>
+        <p
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: 18,
+            fontWeight: "500"
+          }}>
+          What it does ?
+        </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}>
+          <p style={{ textAlign: "center" }}>
+            When you are uploading any file to the web site we will ensure that
+            it is encrypted and your file is secure in our hands
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
